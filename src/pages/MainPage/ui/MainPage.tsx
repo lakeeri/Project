@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-export default function MainPage(){
-    const {t} = useTranslation('main');
+export default function MainPage() {
+    const { t } = useTranslation('main');
 
-    return(
+    return (
         <div>
             {t('Главная страница')}
         </div>
-    )
+    );
 }
