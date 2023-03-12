@@ -24,6 +24,12 @@ module.exports = {
         'i18next',
     ],
     overrides: [
+        {
+            files: ['**/src/**/*.test.{ts,tsx}'],
+            rules: {
+                'i18next/no-literal-string': 'off',
+            },
+        },
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -43,7 +49,15 @@ module.exports = {
         'no-shadow': 'off',
         'no-undef': 'warn',
         'no-underscore-dangle': 'off',
-        'i18next/no-literal-string': ['error', { markupOnly: true }],
+        'i18next/no-literal-string': ['error',
+            {
+                markupOnly: true,
+                ignoreAttribute: ['data-testid'],
+            },
+        ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
+    },
+    globals: {
+        __IS_DEV__: true,
     },
 };
