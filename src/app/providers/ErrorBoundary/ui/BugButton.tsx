@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from 'shared/ui/Button/Button';
 
-//компонет для тестирования
+// компонет для тестирования
 export const BugButton: React.FC = () => {
     const [error, setError] = useState(false);
     const onThrow = () => {

@@ -5,8 +5,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { ErrorPage } from './ErrorPage';
 
-
-
 export default {
     title: 'widgets/ErrorPage',
     component: ErrorPage,

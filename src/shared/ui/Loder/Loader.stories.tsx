@@ -5,7 +5,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Loader } from './Loader';
 
-
 export default {
     title: 'shared/Loader',
     component: Loader,

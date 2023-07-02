@@ -22,13 +22,13 @@ export const Sidebar: React.FC<SidebarProps> = (props) => {
             data-testid="sidebar"
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
-            <Button
+            {/* <Button
                 data-testid="sidebar-toggle"
                 type="button"
                 onClick={toggleHandler}
             >
                 toggle
-            </Button>
+            </Button> */}
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher className={cls.lang} />

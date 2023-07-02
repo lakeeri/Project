@@ -5,7 +5,6 @@ import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDeco
 import { Theme } from 'app/providers/ThemeProvider';
 import { Sidebar } from './Sidebar';
 
-
 export default {
     title: 'widgets/Sidebar',
     component: Sidebar,
