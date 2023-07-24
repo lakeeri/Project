@@ -33,7 +33,7 @@ export const OutlineL = Template.bind({});
 OutlineL.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE,
-    size: ButtonSize.L
+    size: ButtonSize.L,
 };
 
 export const OutlineXL = Template.bind({});
@@ -41,7 +41,7 @@ export const OutlineXL = Template.bind({});
 OutlineXL.args = {
     children: 'Text',
     theme: ButtonTheme.OUTLINE,
-    size: ButtonSize.XL
+    size: ButtonSize.XL,
 };
 export const Outline = Template.bind({});
 
@@ -77,7 +77,7 @@ export const Square = Template.bind({});
 Square.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
-    square: true
+    square: true,
 };
 
 export const SquareXL = Template.bind({});
@@ -86,7 +86,7 @@ SquareXL.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
-    size: ButtonSize.XL
+    size: ButtonSize.XL,
 };
 
 export const SquareL = Template.bind({});
@@ -95,6 +95,5 @@ SquareL.args = {
     children: '>',
     theme: ButtonTheme.BACKGROUND_INVERTED,
     square: true,
-    size: ButtonSize.L
+    size: ButtonSize.L,
 };
-
