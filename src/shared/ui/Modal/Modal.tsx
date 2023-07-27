@@ -28,7 +28,6 @@ export const Modal: React.FC<ModalProps> = (props) => {
     const mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
-        [cls[theme]]: true,
     };
 
     const overlayClickHandler = useCallback(() => {
