@@ -9,7 +9,8 @@ import { Portal } from '../Portal/Portal';
 interface ModalProps {
     className?: string,
     isOpen: boolean,
-    onClose: () => void
+    onClose: () => void,
+    lazy?: boolean
 }
 const ANIMATION_DELAY = 200;
 
@@ -19,10 +20,12 @@ export const Modal: React.FC<ModalProps> = (props) => {
         children,
         isOpen,
         onClose,
+        lazy,
     } = props;
 
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const { theme } = useTheme();
 
     const mods = {
@@ -60,6 +63,16 @@ export const Modal: React.FC<ModalProps> = (props) => {
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>
