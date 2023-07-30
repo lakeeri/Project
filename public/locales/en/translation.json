@@ -10,5 +10,8 @@
     "Короткий язык": "En",
     "Войти": "Enter",
     "Введите username": "Enter username",
-    "Введите пароль": "Enter password"
+    "Введите пароль": "Enter password",
+    "Форма авторизации": "Authorisation form",
+    "Вы ввели неверный логин или пароль": "Uncorrect username or password",
+    "Выйти": "Exit"
 }

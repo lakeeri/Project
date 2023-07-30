@@ -68,6 +68,8 @@ export const Modal: React.FC<ModalProps> = (props) => {
         if (isOpen) {
             setIsMounted(true);
         }
+
+        return () => setIsMounted(false);
     }, [isOpen]);
 
     if (lazy && !isMounted) {

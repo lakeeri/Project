@@ -1,7 +1,6 @@
 import React from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
-import cls from './AuthModal.module.scss';
 import { AuthForm } from '../AuthForm/AuthForm';
 
 interface AuthModalProps {
@@ -19,7 +18,7 @@ export const AuthModal: React.FC<AuthModalProps> = (props) => {
 
     return (
         <Modal
-            className={classNames(cls.AuthModal, {}, [className])}
+            className={classNames('', {}, [className])}
             isOpen={isOpen}
             onClose={onClose}
             lazy
