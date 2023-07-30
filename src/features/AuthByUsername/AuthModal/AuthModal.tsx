@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Modal } from 'shared/ui/Modal/Modal';
-import { AuthForm } from '../AuthForm/AuthForm';
+import { Loader } from 'shared/ui/Loder/Loader';
+import { AuthFormAsync } from '../AuthForm/AuthFormAsync';
 
 interface AuthModalProps {
     className?: string,
@@ -23,7 +24,10 @@ export const AuthModal: React.FC<AuthModalProps> = (props) => {
             onClose={onClose}
             lazy
         >
-            <AuthForm />
+            <Suspense fallback={<Loader />}>
+                <AuthFormAsync />
+            </Suspense>
+
         </Modal>
     );
 };
